@@ -6,17 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      background-color: #ffffff;
-      color: #111;
+
+      /* Destro dark background */
+      background: radial-gradient(
+        circle at top,
+        #1a0f2e 0%,
+        #0b0b12 40%,
+        #050507 100%
+      );
+
+      color: #e5e7eb;
     }
 
     .container {
       max-width: 900px;
-      margin: 80px auto;
-      padding: 40px;
+      margin: 60px auto;
+      padding: 50px;
+
+      background: rgba(15, 15, 25, 0.85);
+
+      border-radius: 14px;
+
+      border: 1px solid rgba(139, 92, 246, 0.25);
+
+      box-shadow:
+        0 0 40px rgba(139, 92, 246, 0.15),
+        0 0 80px rgba(139, 92, 246, 0.05);
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      height: 52px;
     }
 
     .nav {
@@ -24,23 +51,24 @@
     }
 
     .nav a {
-      color: #111;
+      color: #a78bfa;
       text-decoration: none;
       font-size: 14px;
     }
 
     .nav a:hover {
-      text-decoration: underline;
+      color: #c4b5fd;
     }
 
     h1 {
       font-size: 36px;
       margin-bottom: 10px;
       font-weight: 600;
+      color: #ffffff;
     }
 
     .effective-date {
-      color: #666;
+      color: #9ca3af;
       font-size: 14px;
       margin-bottom: 30px;
     }
@@ -49,45 +77,42 @@
       margin-top: 40px;
       font-size: 22px;
       font-weight: 600;
+      color: #c4b5fd;
     }
 
     p {
       font-size: 16px;
       line-height: 1.7;
-      color: #333;
+      color: #d1d5db;
     }
 
     ul {
       margin-left: 20px;
       line-height: 1.7;
-      color: #333;
+      color: #d1d5db;
     }
 
     li {
       margin-bottom: 6px;
     }
 
-    .footer {
-      margin-top: 80px;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .footer a {
-      color: #111;
+    a {
+      color: #a78bfa;
       text-decoration: none;
     }
 
-    .footer a:hover {
-      text-decoration: underline;
+    a:hover {
+      color: #c4b5fd;
     }
 
-    .brand {
-      font-weight: 600;
-      font-size: 16px;
-      margin-bottom: 40px;
+    .footer {
+      margin-top: 80px;
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(139, 92, 246, 0.25);
+
+      font-size: 14px;
+      color: #9ca3af;
     }
 
   </style>
@@ -97,11 +122,15 @@
 
 <div class="container">
 
-  <div class="nav">
-    <a href="/">← Back to destro.ai</a>
+  <div class="logo">
+    <a href="https://destroai.com">
+      <img src="https://raw.githubusercontent.com/sooryadestro/destro-image-host/b1306a564dede3d852a7aa9db272d8a008b49b94/destro-logo-white.png">
+    </a>
   </div>
 
-  <div class="brand">Destro</div>
+  <div class="nav">
+    <a href="https://destroai.com">← Back to destroai.com</a>
+  </div>
 
   <h1>Privacy Policy</h1>
 
@@ -130,8 +159,8 @@
   </p>
 
   <ul>
-    <li>Device identifiers (e.g., wearable device IDs)</li>
-    <li>Operational workflow and task execution data</li>
+    <li>Device identifiers</li>
+    <li>Operational workflow data</li>
     <li>Robot and system telemetry</li>
     <li>System logs and audit records</li>
     <li>Configuration and deployment information</li>
@@ -147,36 +176,16 @@
     Destro software is deployed within infrastructure environments controlled and managed by customers. Customers retain ownership and control of their data at all times.
   </p>
 
-  <p>
-    Destro does not access customer data except as necessary to provide authorized support, troubleshoot operational issues, or improve system reliability, and only with appropriate authorization.
-  </p>
-
   <h2>4. Data Storage and Retention</h2>
 
   <p>
-    Operational data is stored only as required for active system functionality, monitoring, and operational continuity. Data retention policies are governed by customer infrastructure and deployment configuration.
-  </p>
-
-  <p>
-    Destro does not independently retain customer operational data outside of customer-controlled environments unless explicitly authorized.
+    Operational data is stored only as required for active system functionality and operational continuity. Data retention policies are governed by customer infrastructure.
   </p>
 
   <h2>5. Data Security</h2>
 
   <p>
-    Destro implements industry-standard security controls to protect system and operational data, including:
-  </p>
-
-  <ul>
-    <li>Encrypted communication using TLS</li>
-    <li>Authentication and access controls</li>
-    <li>Secure containerized deployment and network isolation</li>
-    <li>System logging, monitoring, and audit trails</li>
-    <li>Dependency and vulnerability scanning</li>
-  </ul>
-
-  <p>
-    Access to systems and operational data is restricted to authorized personnel and controlled through secure authentication mechanisms.
+    Destro implements industry-standard security controls including encryption, authentication, access controls, container isolation, and vulnerability scanning.
   </p>
 
   <h2>6. Data Sharing</h2>
@@ -185,32 +194,18 @@
     Destro does not sell, rent, or share customer operational data with third parties.
   </p>
 
+  <h2>7. Changes to This Policy</h2>
+
   <p>
-    Customer data remains within customer-controlled infrastructure environments unless explicitly authorized by the customer.
+    We may update this Privacy Policy from time to time. Updates will be posted on this page.
   </p>
 
-  <h2>7. Customer Responsibilities</h2>
+  <h2>8. Contact Information</h2>
 
   <p>
-    Customers are responsible for managing access controls, retention policies, network security, and operational security configurations within their deployment environments.
-  </p>
-
-  <h2>8. Changes to This Policy</h2>
-
-  <p>
-    We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised effective date.
-  </p>
-
-  <h2>9. Contact Information</h2>
-
-  <p>
-    For questions regarding this Privacy Policy or Destro’s data handling practices, please contact:
-  </p>
-
-  <p>
-    Destro Security Team<br>
+    Destro Engineering Team<br>
     Email: <a href="mailto:security@destro.ai">security@destro.ai</a><br>
-    Website: <a href="https://www.destroai.com">https://www.destroai.com</a>
+    Website: <a href="https://destroai.com">destroai.com</a>
   </p>
 
   <div class="footer">
